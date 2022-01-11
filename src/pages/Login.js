@@ -36,10 +36,10 @@ class Login extends React.Component {
         <label htmlFor="userEmail">
           E-mail:
           <input
+            data-testid="email-input"
             onChange={ this.onInputUserEmailChange }
             id="userEmail"
             type="email"
-            data-testid="email-input"
           />
         </label>
         <label htmlFor="password">
@@ -56,8 +56,8 @@ class Login extends React.Component {
             && email.includes('@')
             && email.includes('.com')) }
           onClick={ () => {
-            userEmail(this.state);
             history.push('/carteira');
+            userEmail(this.state);
           } }
         >
           Entrar
