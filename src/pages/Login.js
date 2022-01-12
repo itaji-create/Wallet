@@ -10,22 +10,25 @@ class Login extends React.Component {
       password: '',
       email: '',
     };
-    this.onInputPasswordChange = this.onInputPasswordChange.bind(this);
-    this.onInputUserEmailChange = this.onInputUserEmailChange.bind(this);
   }
 
-  onInputPasswordChange({ target }) {
+  onInputPasswordChange = ({ target }) => {
     const { value } = target;
     this.setState({ password: value });
   }
 
-  onInputUserEmailChange({ target }) {
+  onInputUserEmailChange = ({ target }) => {
     const { value } = target;
     this.setState({ email: value });
   }
 
-  render() {
+  onClickButton = () => {
     const { userEmail, history } = this.props;
+    userEmail(this.state);
+    history.push('/carteira');
+  }
+
+  render() {
     const {
       password,
       email,
@@ -55,10 +58,7 @@ class Login extends React.Component {
           disabled={ !(password.length >= minLength
             && email.includes('@')
             && email.includes('.com')) }
-          onClick={ () => {
-            history.push('/carteira');
-            userEmail(this.state);
-          } }
+          onClick={ this.onClickButton }
         >
           Entrar
         </button>
