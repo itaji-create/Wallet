@@ -8,9 +8,9 @@ class Header extends React.Component {
     return (
       <div>
         <header>
-          <p data-testid="email-field">{ email }</p>
-          <p data-testid="total-field">{ total === undefined ? 0 : total }</p>
-          <p data-testid="header-currency-field">{ currencyField }</p>
+          <span data-testid="email-field">{ email }</span>
+          <span data-testid="total-field">{ total === undefined ? 0 : total }</span>
+          <span data-testid="header-currency-field">{ currencyField }</span>
         </header>
       </div>
     );
