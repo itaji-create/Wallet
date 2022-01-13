@@ -16,14 +16,20 @@ class ExpenseTable extends React.Component {
     return (
       <table>
         <tr>
-          <columnheader role="columnheader">{ Description }</columnheader>
-          <columnheader role="columnheader">{ Tag }</columnheader>
-          <columnheader role="columnheader">{ Method }</columnheader>
-          <columnheader role="columnheader">{ Value }</columnheader>
-          <columnheader role="columnheader">{ Currency }</columnheader>
-          <columnheader role="columnheader">{ ConvertedValue }</columnheader>
-          <columnheader role="columnheader">{ ConversionCurrency }</columnheader>
-          <columnheader role="columnheader">{ Change }</columnheader>
+          <columnheader className="column" role="columnheader">
+            { Description }
+          </columnheader>
+          <columnheader className="column" role="columnheader">{ Tag }</columnheader>
+          <columnheader className="column" role="columnheader">{ Method }</columnheader>
+          <columnheader className="column" role="columnheader">{ Value }</columnheader>
+          <columnheader className="column" role="columnheader">{ Currency }</columnheader>
+          <columnheader className="column" role="columnheader">
+            { ConvertedValue }
+          </columnheader>
+          <columnheader className="column" role="columnheader">
+            { ConversionCurrency }
+          </columnheader>
+          <columnheader className="column" role="columnheader">{ Change }</columnheader>
         </tr>
       </table>
     );

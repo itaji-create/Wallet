@@ -22,7 +22,7 @@ header p {
   margin: 10px;
 }
 
-#expense-form {
+#expense-form, table {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -57,4 +57,18 @@ header p {
   margin-left: 165px;
   padding: 5px;
   width: 100px;
+}
+
+table {
+  background-color: rgb(61, 60, 60);
+}
+
+tr, .column {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 90%;
+}
+
+.column {
+  margin-left: 20px;
 }
