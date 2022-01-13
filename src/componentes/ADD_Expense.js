@@ -76,7 +76,7 @@ class Expense extends React.Component {
             data-testid="currency-input"
           >
             {Object.keys(currencies).map((curr) => (
-              <option key={ curr }>{curr}</option>
+              curr !== 'USDT' && <option key={ curr } data-testid={ curr }>{curr}</option>
             ))}
           </select>
         </label>
