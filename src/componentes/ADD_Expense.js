@@ -48,9 +48,10 @@ class Expense extends React.Component {
     const { currencies } = this.props;
     const { value, description } = this.state;
     return (
-      <form>
+      <form id="expense-form">
         <label htmlFor="value-input">
           Valor
+          <br />
           <input
             name="value"
             value={ value }
@@ -60,6 +61,7 @@ class Expense extends React.Component {
         </label>
         <label htmlFor="description-input">
           Descrição
+          <br />
           <input
             name="description"
             onChange={ this.handleChance }
@@ -69,6 +71,7 @@ class Expense extends React.Component {
         </label>
         <label htmlFor="currency">
           Moeda
+          <br />
           <select
             onClick={ this.handleChance }
             name="currency"
@@ -82,6 +85,7 @@ class Expense extends React.Component {
         </label>
         <label htmlFor="method">
           Método de Pagamento
+          <br />
           <select
             onClick={ this.handleChance }
             name="method"
@@ -95,6 +99,7 @@ class Expense extends React.Component {
         </label>
         <label htmlFor="tag">
           Despesa com:
+          <br />
           <select
             onClick={ this.handleChance }
             name="tag"

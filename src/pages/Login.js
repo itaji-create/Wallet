@@ -35,34 +35,36 @@ class Login extends React.Component {
     } = this.state;
     const minLength = 6;
     return (
-      <form>
-        <label htmlFor="userEmail">
-          E-mail:
-          <input
-            data-testid="email-input"
-            onChange={ this.onInputUserEmailChange }
-            id="userEmail"
-            type="email"
-          />
-        </label>
-        <label htmlFor="password">
-          Senha:
-          <input
-            data-testid="password-input"
-            id="password"
-            onChange={ this.onInputPasswordChange }
-          />
-        </label>
-        <button
-          type="button"
-          disabled={ !(password.length >= minLength
-            && email.includes('@')
-            && email.includes('.com')) }
-          onClick={ this.onClickButton }
-        >
-          Entrar
-        </button>
-      </form>
+      <div id="div">
+        <form id="login-form">
+          <label htmlFor="userEmail">
+            E-mail:
+            <input
+              data-testid="email-input"
+              onChange={ this.onInputUserEmailChange }
+              id="userEmail"
+              type="email"
+            />
+          </label>
+          <label htmlFor="password">
+            Senha:
+            <input
+              data-testid="password-input"
+              id="password"
+              onChange={ this.onInputPasswordChange }
+            />
+          </label>
+          <button
+            type="button"
+            disabled={ !(password.length >= minLength
+              && email.includes('@')
+              && email.includes('.com')) }
+            onClick={ this.onClickButton }
+          >
+            Entrar
+          </button>
+        </form>
+      </div>
     );
   }
 }

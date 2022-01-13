@@ -8,11 +8,15 @@ class Header extends React.Component {
     return (
       <div>
         <header>
-          <span data-testid="email-field">{ email }</span>
-          <span data-testid="total-field">
+          <p data-testid="email-field">
+            E-mail:
+            { email }
+          </p>
+          <p data-testid="total-field">
+            Despesa Total:  R$
             { total === undefined ? 0 : total }
-          </span>
-          <span data-testid="header-currency-field">{ BRL }</span>
+          </p>
+          <p data-testid="header-currency-field">{ BRL }</p>
         </header>
       </div>
     );
