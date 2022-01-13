@@ -1,10 +1,10 @@
 // Coloque aqui suas actions
-// action user
+// action user - add email
 export const ADD_DATA = 'ADD_DATA';
 
 export const addData = (email) => ({ type: ADD_DATA, email });
 
-// action wallet
+// action wallet - add expense
 export const ADD_EXPENSE = 'ADD_EXPENSE';
 
 export const addExpense = (payload) => ({
