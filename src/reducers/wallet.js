@@ -19,7 +19,9 @@ const wallet = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       expenses: [...state.expenses, action.payload],
-      sum: Number(state.sum) + Number(action.payload.value),
+      sum: state.sum
+        + ((action.payload.value)
+        * (action.payload.exchangeRates[action.payload.currency].ask)),
     };
   default:
     return state;

@@ -31,14 +31,14 @@ class Expense extends React.Component {
   onClickButton = () => {
     const { expenseData, getCurrency } = this.props;
     const { id } = this.state;
-    expenseData(this.state);
     getCurrency('all');
+    expenseData(this.state);
     this.setState({
       id: id + 1,
       value: '',
-      currency: 'BRL',
-      method: 'Dinheiro',
-      tag: 'Alimentação',
+      currency: '',
+      method: '',
+      tag: '',
       description: '',
       exchangeRates: {},
     });
@@ -76,7 +76,7 @@ class Expense extends React.Component {
           Moeda
           <br />
           <select
-            onClick={ this.handleChance }
+            onChange={ this.handleChance }
             name="currency"
             id="currency-input"
             data-testid="currency-input"
@@ -90,7 +90,7 @@ class Expense extends React.Component {
           Método de Pagamento
           <br />
           <select
-            onClick={ this.handleChance }
+            onChange={ this.handleChance }
             name="method"
             id="method-input"
             data-testid="method-input"
@@ -104,7 +104,7 @@ class Expense extends React.Component {
           Despesa com:
           <br />
           <select
-            onClick={ this.handleChance }
+            onChange={ this.handleChance }
             name="tag"
             id="tag-input"
             data-testid="tag-input"
