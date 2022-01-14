@@ -12,24 +12,27 @@ class ExpenseTable extends React.Component {
       ConvertedValue,
       ConversionCurrency,
       Change,
+      role,
+      exchange,
     } = this.props;
     return (
       <table>
         <tr>
-          <columnheader className="column" role="columnheader">
+          <columnheader className="column" role={ role }>
             { Description }
           </columnheader>
-          <columnheader className="column" role="columnheader">{ Tag }</columnheader>
-          <columnheader className="column" role="columnheader">{ Method }</columnheader>
-          <columnheader className="column" role="columnheader">{ Value }</columnheader>
-          <columnheader className="column" role="columnheader">{ Currency }</columnheader>
-          <columnheader className="column" role="columnheader">
+          <columnheader className="column" role={ role }>{ Tag }</columnheader>
+          <columnheader className="column" role={ role }>{ Method }</columnheader>
+          <columnheader className="column" role={ role }>{ Value }</columnheader>
+          <columnheader className="column" role={ role }>{ Currency }</columnheader>
+          <columnheader className="column" role={ role }>{ exchange }</columnheader>
+          <columnheader className="column" role={ role }>
             { ConvertedValue }
           </columnheader>
-          <columnheader className="column" role="columnheader">
+          <columnheader className="column" role={ role }>
             { ConversionCurrency }
           </columnheader>
-          <columnheader className="column" role="columnheader">{ Change }</columnheader>
+          <columnheader className="column" role={ role }>{ Change }</columnheader>
         </tr>
       </table>
     );
@@ -45,6 +48,8 @@ ExpenseTable.propTypes = {
   ConvertedValue: PropTypes.string.isRequired,
   ConversionCurrency: PropTypes.string.isRequired,
   Change: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+  exchange: PropTypes.string.isRequired,
 };
 
 export default ExpenseTable;

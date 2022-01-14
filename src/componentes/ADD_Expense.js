@@ -9,10 +9,10 @@ class Expense extends React.Component {
     this.state = {
       id: 0,
       value: '',
-      description: '',
       currency: '',
       method: '',
       tag: '',
+      description: '',
       exchangeRates: {},
     };
   }
@@ -36,10 +36,10 @@ class Expense extends React.Component {
     this.setState({
       id: id + 1,
       value: '',
+      currency: 'BRL',
+      method: 'Dinheiro',
+      tag: 'Alimentação',
       description: '',
-      currency: '',
-      method: '',
-      tag: '',
       exchangeRates: {},
     });
   }
@@ -55,6 +55,8 @@ class Expense extends React.Component {
           <input
             name="value"
             value={ value }
+            id="value-input"
+            type="number"
             onChange={ this.handleChance }
             data-testid="value-input"
           />
@@ -66,16 +68,17 @@ class Expense extends React.Component {
             name="description"
             onChange={ this.handleChance }
             value={ description }
+            id="description-input"
             data-testid="description-input"
           />
         </label>
-        <label htmlFor="currency">
+        <label htmlFor="currency-input">
           Moeda
           <br />
           <select
             onClick={ this.handleChance }
             name="currency"
-            id="currency"
+            id="currency-input"
             data-testid="currency-input"
           >
             {Object.keys(currencies).map((curr) => (
@@ -83,13 +86,13 @@ class Expense extends React.Component {
             ))}
           </select>
         </label>
-        <label htmlFor="method">
+        <label htmlFor="method-input">
           Método de Pagamento
           <br />
           <select
             onClick={ this.handleChance }
             name="method"
-            id="method"
+            id="method-input"
             data-testid="method-input"
           >
             <option value="Dinheiro">Dinheiro</option>
@@ -97,13 +100,13 @@ class Expense extends React.Component {
             <option value="Cartão de débito">Cartão de débito</option>
           </select>
         </label>
-        <label htmlFor="tag">
+        <label htmlFor="tag-input">
           Despesa com:
           <br />
           <select
             onClick={ this.handleChance }
             name="tag"
-            id="tag"
+            id="tag-input"
             data-testid="tag-input"
           >
             <option value="Alimentação">Alimentação</option>

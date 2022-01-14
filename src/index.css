@@ -66,6 +66,7 @@ table {
 tr, .column {
   display: flex;
   flex-wrap: nowrap;
+  text-align: center;
   width: 90%;
 }
 
